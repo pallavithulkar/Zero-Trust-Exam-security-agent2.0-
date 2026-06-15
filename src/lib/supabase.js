@@ -7,6 +7,8 @@ const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const hasValidCredentials = 
   supabaseUrl && 
   supabaseAnonKey && 
+  typeof supabaseUrl === 'string' &&
+  typeof supabaseAnonKey === 'string' &&
   supabaseUrl !== 'YOUR_SUPABASE_URL' && 
   supabaseAnonKey !== 'YOUR_SUPABASE_ANON_KEY' &&
   supabaseUrl.trim() !== '' &&
